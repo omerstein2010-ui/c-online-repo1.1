@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\avior\\Documents\\GitHub\\c-online-repo1.1\\Test1.0.cs\\Test1.0.cs.csproj",
-      "projectName": "Test1.0.cs",
-      "projectPath": "C:\\Users\\avior\\Documents\\GitHub\\c-online-repo1.1\\Test1.0.cs\\Test1.0.cs.csproj",
+      "projectUniqueName": "C:\\Users\\avior\\Documents\\Csh_Environment\\Test1.2.cs\\Test1.2.cs.csproj",
+      "projectName": "Test1.2.cs",
+      "projectPath": "C:\\Users\\avior\\Documents\\Csh_Environment\\Test1.2.cs\\Test1.2.cs.csproj",
       "packagesPath": "C:\\Users\\avior\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\avior\\Documents\\GitHub\\c-online-repo1.1\\Test1.0.cs\\obj\\",
+      "outputPath": "C:\\Users\\avior\\Documents\\Csh_Environment\\Test1.2.cs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

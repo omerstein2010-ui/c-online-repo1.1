@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 class Program
 {
     public static void tsk1(string str)
@@ -20,9 +21,31 @@ class Program
             // }
         }
     }
+    public static int tsk2(string str,string w)
+    {
+        int n2=0;
+        while (str.Contains(w) == true)
+        {
+            n2+=1;
+            int x=str.IndexOf($"{w}");
+            str=$"{str.Substring(0,x-1)} {str.Substring(x+6)}";
+            int n=str.Length-str.Substring(0,x).Length;
+            if (n == w.Length)
+            {
+                str=str.Substring(0,x);
+            }
+            System.Console.WriteLine(str);
+            System.Console.WriteLine(n);
+            System.Console.WriteLine(x);
+
+        }
+        return n2;
+    }
     public static void Main(string[] args)
     {
         tsk1("abcd");
+        tsk2("shalom ani bomer","bomer");
+        System.Console.WriteLine("test1.0");
         // System.Console.WriteLine("what str ya want enter?\n");
         // string str=Console.ReadLine();
         // string str2=$"{str.IndexOf("ab")} {str.IndexOf("bc")} {str.IndexOf("cd")} {str.IndexOf("de")} {str.IndexOf("ef")} {str.IndexOf("fg")} {str.IndexOf("gh")} {str.IndexOf("hi")} {str.IndexOf("ij")} {str.IndexOf("jk")} {str.IndexOf("kl")} {str.IndexOf("lm")} {str.IndexOf("mn")} {str.IndexOf("no")} {str.IndexOf("op")} {str.IndexOf("pq")} {str.IndexOf("qr")} {str.IndexOf("rs")} {str.IndexOf("st")} {str.IndexOf("tu")} {str.IndexOf("uv")} {str.IndexOf("vw")} {str.IndexOf("wx")} {str.IndexOf("xy")} {str.IndexOf("yz")}";

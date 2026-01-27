@@ -40,9 +40,18 @@ class Program
         }
         return n2;
     }
+    public static string tsk3(string str,string str2, string str3)
+    {
+        if (str.Contains(str2))
+        {
+            str=str.Replace(str2,str3);
+        }   
+        return str;
+    }
     public static void Main(string[] args)
     {
         tsk1("abcd");
         tsk2("shalom ani bomer bomer", "bomer");
+        System.Console.WriteLine(tsk3("And he told us of his life in the land of submarines.","And","and"));
     }
 }

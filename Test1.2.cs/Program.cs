@@ -48,10 +48,36 @@ class Program
         }   
         return str;
     }
+    public static void tsk5(string str)
+    {
+        int ind=0;
+        string s3="";
+        string s=str;
+        string s4=s.Substring(ind,2);
+        for(int n3=0;n3<(s.Length/2);n3++)
+        {
+            s4=s.Substring(ind,2);
+            // System.Console.WriteLine($"s42={s4}");
+            for(int i = 1, j = 0; j < s4.Length; j++, i++)
+            {
+                // System.Console.WriteLine($"s4={s4}");
+                s3+=s4[^i];
+                // System.Console.WriteLine($"s3={s3}");
+            }
+            // s.Remove(ind,2);
+            ind+=2;
+            // System.Console.WriteLine($"s={s}");
+            
+            // System.Console.WriteLine($"s42={s4}");
+            
+        }
+        System.Console.WriteLine($"inv_str={s3}");
+    }
     public static void Main(string[] args)
     {
         tsk1("abcd");
         tsk2("shalom ani bomer bomer", "bomer");
         System.Console.WriteLine(tsk3("And he told us of his life in the land of submarines.","And","and"));
+        tsk5("abcd");
     }
 }

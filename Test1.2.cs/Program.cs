@@ -73,6 +73,102 @@ class Program
         }
         System.Console.WriteLine($"inv_str={s3}");
     }
+    public static void tsk6()
+    {
+        string s="";
+        int n2=0;
+        int[] l1={1,32,64,128,128,127,128,128};
+        int mx=l1[0];
+        int mn=l1[0];
+        for(int i = 1; i < l1.Length; i++)
+        {
+            int n=l1[i];
+            mx=Math.Max(mx,n);
+            mn=Math.Min(mn,n);
+        }
+        System.Console.WriteLine($"mn={mn}, mx={mx}");
+        for(int j = 0; j < l1.Length; j++)
+        {
+            if (l1[j] == mx)
+            {
+                s+=$"{j} ";
+                n2+=1;
+            }
+        }
+        System.Console.WriteLine(n2);
+        System.Console.WriteLine(s);
+    }   
+    public static void tsk7()
+    {
+        int n3=0;
+        int[] a=new int[10];
+        for(int i = 0,j=1,x=3; i < 10 ; i++,j+=x,x+=2)
+        {
+            // System.Console.WriteLine(j);
+            a[i]=j;
+            n3+=1;
+        }
+        foreach(int n in a)
+        {
+            System.Console.WriteLine($"n={n}");
+        }
+        System.Console.WriteLine($"n3={n3}");
+    } 
+    public static void tsk8()
+    {
+        int[] a=new int[10];
+        for(int i = 0, j = 2; i < 10; i++)
+        {
+            if (i % 2 != 0 && i > 0)
+            {   j+=2;
+                j*=-1;
+            }
+            if(i%2==0&&i>0)
+            {
+                if (j < 0)
+                {
+                  j*=-1;
+                  j+=2;      
+                }
+                // j*=-1;
+            }
+            a[i]=j;
+        }
+    }
+    public static void tsk9()
+    {
+        int[] a=new int[10];
+        for(int i = 0, j = 7, k = 1; i < 10; i++, j += k, k++)
+        {
+            a[i]=j;
+        }
+        foreach(int n in a)
+        {
+            System.Console.WriteLine(n);
+        }
+    }
+    public static void tsk10()
+    {
+        bool b=false;
+        int[] l1={1,2,3,4,5,6,7,8,9,10};
+        int mx=l1[0];
+        for(int i = 1; i < 9; i++)
+        {
+            if (mx < l1[i])
+            {
+                mx=l1[i];
+                b=true;
+            }
+            else
+            {
+                System.Console.WriteLine("it ain't ordered upwards");
+            }
+        }
+        if (b == true)
+        {
+            System.Console.WriteLine("it's ordered upwards");
+        }
+    }
     public static void Main(string[] args)
     {
         tsk1("abcd");

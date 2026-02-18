@@ -169,6 +169,99 @@ class Program
             System.Console.WriteLine("it's ordered upwards");
         }
     }
+    public static void tsk11()
+    {
+        Random r=new Random();
+        int r2=r.Next(3,13);
+        System.Console.WriteLine($"r2={r2}");
+        int[] l1=new int[r2];
+        int nl2=r2/3;
+        int nl3=nl2*2;
+        int[] l2=new int[nl2];
+        int[] l3=new int[nl2];
+        int[] l4=new int[nl2];
+        int[] rlt=new int[nl2];
+        for(int i = 0; i < r2; i++)
+        {
+            if (i % 3 == 0)
+            {
+                int n3=r.Next(1,3);
+                l1[i]=n3;
+            }
+            else
+            {
+                int n=r.Next();
+                // System.Console.WriteLine(n);
+                if (n % 3 == 0&&n>0)
+                {
+                    l1[i]=n;
+                }
+                else
+                {
+                    while (n % 3 != 0)
+                    {
+                        if (n != 0)
+                        {
+                            n=r.Next();
+                            // System.Console.WriteLine($"n.sec={n}");    
+                        }
+                    }
+                    if (n % 3 == 0)
+                    {
+                        l1[i]=n;
+                    }                                     
+                }
+            }
+        }
+        for(int j = 0,j2=0; j2 < (l1.Length / 3); j += 3,j2++)
+        {
+            l2[j2]=l1[j];    
+        }
+        for(int j = 1,j2=0; j2 < (l1.Length / 3); j += 3,j2++)
+        {
+            l3[j2]=l1[j];    
+        }
+        for(int j = 2,j2=0; j2 < (l1.Length / 3); j += 3,j2++)
+        {
+            l4[j2]=l1[j];    
+        }
+        for(int l = 0; l < nl2; l++)
+        {
+            if (l2[l] == 1)
+            {
+                rlt[l]=l3[l]+l4[l];
+            }
+            else if (l2[l] == 2)
+            {
+                rlt[l]=l3[l]-l4[l];
+            }
+        }
+        System.Console.WriteLine("shalom ani bomer");
+        foreach(int n2 in l1)
+        {
+            System.Console.Write($"n2={n2} ");
+        }
+        System.Console.WriteLine("\n");
+        foreach(int n4 in l2)
+        {
+            System.Console.WriteLine($"n4={n4}");
+        }
+        System.Console.WriteLine("\n");
+        foreach(int n8 in l3)
+        {
+            System.Console.WriteLine($"n8={n8}");
+        }
+        System.Console.WriteLine("\n");
+        foreach(int n9 in l4)
+        {
+            System.Console.WriteLine($"n9={n9}");
+        }
+        System.Console.WriteLine("\n");
+        foreach(int n10 in rlt)
+        {
+            System.Console.WriteLine($"n10={n10}");
+        }       
+    }
     public static void Main(string[] args)
     {
         tsk1("abcd");
